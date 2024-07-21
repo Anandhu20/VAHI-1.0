@@ -1,4 +1,4 @@
-# VAHI-2.0(Voice Assistant with Hand Sign Interpretations)
+# VAHI-1.0(Voice Assistant with Hand Sign Interpretations)
 Steps to use VAHI
 1) Run Server.py file
 2) Open index.html file and run live server
