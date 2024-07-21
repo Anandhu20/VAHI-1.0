@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Sign Interpreter</title>
+    <link rel="stylesheet" href="style12.css">
+</head>
+<body>
+
+<div class="circle"></div>
+
+<div class="container">
+    <h1><b>HAND SIGN INTERPRETER</b></h1>
+</div>
+
+<div class="line"></div>
+
+<div class="button-container">
+    <form id="recordingForm" action="http://127.0.0.1:5000/run_inference_classifier" method="post">
+        <button type="submit" class="huge-button" onclick="startRecording()"><b>START<br>RECORDING</b></button>
+    </form>
+</div>
+
+<script>
+    function startRecording() {
+        // Send a POST request to the server using Fetch API
+        fetch('http://127.0.0.1:5000/run_inference_classifier', {
+            method: 'POST',
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log(data);
+            alert(data);
+        })
+        .catch(error => {
+            console.error('Error while recording:', error);
+        });
+    }
+</script>
+</body>
+</html>
