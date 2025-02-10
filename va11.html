@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assistant</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+<div class="circle"></div>
+
+<div class="container">
+    <h1><b>VOICE ASSISTANT</b></h1>
+</div>
+
+<div class="line"></div>
+
+<div class="button-container">
+    <!-- Button to start voice assistant -->
+    <button class="huge-button" onclick="startVoiceAssistant()"><b>START<br>LISTENING</b></button>
+    <!-- Button to stop listening -->
+    <button class="huge-button" onclick="stopListening()"><b>STOP<br>LISTENING</b></button>
+</div>
+
+<script>
+    function startVoiceAssistant() {
+        // Send a POST request to the server using Fetch API
+        fetch('http://127.0.0.1:5000//run_app', {
+            method: 'POST',
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log(data);
+            alert(data);
+        })
+        .catch(error => {
+            console.error('Error starting voice assistant:', error);
+        });
+    }
+
+    function stopListening() {
+        // Send a POST request to the server to stop the subprocess
+        fetch('http://127.0.0.1:5000//stop_app', {
+            method: 'POST',
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log(data);
+            alert(data);
+        })
+        .catch(error => {
+            console.error('Error stopping voice assistant:', error);
+        });
+    }
+</script>
+
+</body>
+</html>

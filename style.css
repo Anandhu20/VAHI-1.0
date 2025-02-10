@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px; /* Center top */
+}
+
+h1 {
+    color: #cc3eb9; /* Faint purple color */
+    font-size: 100px;
+}
+
+
+
+.button-container {
+    text-align: center;
+    margin: 60px; /* Space between button and bottom */
+    
+}
+
+.button {
+    padding: 30px;
+    border: none;
+    background-color: #c54b8e; /* Light pink background */
+    color: #660866; /* Dark pink text color */
+    font-size: 24px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 200px; /* Adjust button width */
+    height: 200px; /* Adjust button height */
+    line-height: 1.5; /* Adjust line height for multi-line text */
+}
+
+.button:hover {
+    background-color: #660866; /* Darken on hover */
+    color: #c54b8e; /* White text on hover */
+}
